@@ -1,0 +1,87 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    bottom: -70px;
+    left: -70px;
+    width: 450px;
+    height: 450px;
+    background-image: url('MMCL_seal.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    opacity: 0.15;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.card.border-primary {
+    transition: transform 0.3s ease;
+    border-color: #e9242a !important;
+}
+
+.card.border-primary:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    border-bottom: 0;
+}
+
+.btn-success {
+    background-color: #26604e;
+    border-color: #26604e;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #1e4d3f;
+    border-color: #1e4d3f;
+    box-shadow: 0 4px 8px rgba(38, 96, 78, 0.3);
+}
+
+.form-control:focus {
+    border-color: #e9242a;
+    box-shadow: 0 0 0 0.25rem rgba(233, 36, 42, 0.25);
+}
+
+.list-group-item {
+    border-left: none;
+    border-right: none;
+    transition: background-color 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: rgba(38, 96, 78, 0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card.border-primary {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.bg-primary {
+    background-color: #172852 !important;
+}
+
+.text-warning {
+    color: #26604e !important;
+}
+
+.border-warning {
+    border-color: #26604e !important;
+}
