@@ -11,10 +11,10 @@ if (isset($_POST['student_name'])) {
     $result = $client->call('getCoursesByStudentName', array('studentName' => $studentName));
 
     if ($client->fault) {
-        $error = "Error: " . (is_array($result) ? $result['faultstring'] : print_r($result, true));
+        $error = "Error: <br><br>" . (is_array($result) ? $result['faultstring'] : print_r($result, true));
     } else {        $error = $client->getError();
         if ($error) {
-            $error = "Error: <br>" . $error;
+            $error = "Error: <br><br>" . $error;
         } else {
             $courses = explode(', ', $result);
         }
